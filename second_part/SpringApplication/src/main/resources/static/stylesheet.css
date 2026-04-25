@@ -1,0 +1,231 @@
+h1{
+    font-size: 35px;
+}
+.button {
+    background-color: white;
+    border-style: dashed;
+    border-color: darkblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.full_heightU{
+    font-family: "Times New Roman";
+    height: 200%;
+    background-color: blanchedalmond;
+}
+.lightrowU {
+    clear: both;
+    height: 250px;
+    width: 1000px;
+    padding: 50px;
+    margin: auto;
+    background-color: transparent;
+}
+.darkrowU {
+    clear: both;
+    height: 250px;
+    width: 1000px;
+    padding: 50px;
+    background-color: burlywood;
+    margin: auto;
+    border-radius: 25px;
+}
+.mainrowU{
+    clear:both;
+    margin: auto;
+    height:500px;
+    width:1200px;
+    background-image: url("after_login/townhouses.jpg");
+    text-align: center;
+    margin-bottom: -30px;
+}
+.smmainrowU{
+    clear:both;
+    margin-left: 100px;
+    background-color: blanchedalmond;
+    height: 300px;
+    width: 700px;
+    text-align: center;
+    font-size: 22px;
+    padding: 30px;
+    position: center;
+    margin-top: -150px;
+    border-color: burlywood;
+    border-width: 10px;
+    border-style: inset;
+}
+.tablesUnew{
+    background: linear-gradient(90deg, rgba(190,109,44,1) 0%, rgba(240,213,162,1) 53%, rgba(236,230,220,1) 76%);
+    font-family: "Garamond";
+    height: 1500px;
+
+}
+.tablesAnew{
+    background: linear-gradient(90deg, rgba(23,101,162,1) 0%, rgba(162,190,240,1) 45%, rgba(245,243,241,1) 83%);
+    font-family: "Garamond";
+    font-size:20px;
+    height: 1500px;
+    text-align: center;
+    margin: auto;
+}
+.maintables{
+    background-color: mintcream;
+    border-color: royalblue;
+    border-style: inset;
+    border-width: 10px;
+    margin: auto;
+}
+.headline{
+    text-align: center;
+    text-decoration-color: #0000CD;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-color: darkblue;
+    padding: 30px;
+    font-size: 30px;
+}
+.tablesA{
+    font-size: 15px;
+    margin: auto;
+    padding-top: 50px;
+
+}
+.halfdiv{
+    display: inline-block;
+    height: 250px;
+    width: 400px;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+}
+a.darkrowU:link{
+    color: blanchedalmond;
+}
+a.lightrowU:link{
+    color: black;
+}
+a:visited{
+    color: darkred;
+}
+.full_heightA{
+    font-family: "Times New Roman";
+    height: 1500px;
+    background-color: aliceblue;
+}
+.lightrowA {
+    clear: both;
+    height: 250px;
+    width: 1000px;
+    padding: 50px;
+    margin: auto;
+    text-size: 30px;
+    background-color: transparent;
+}
+.darkrowA {
+    clear: both;
+    height: 250px;
+    width: 1000px;
+    padding: 50px;
+    background-color: steelblue;
+    margin: auto;
+    border-radius: 25px;
+}
+.mainrowA{
+    clear:both;
+    margin: auto;
+    height:500px;
+    width:1200px;
+    background-image: url("after_login/skyscraper.jpg");
+    text-align: center;
+    margin-bottom: -30px;
+}
+.smmainrowA{
+    clear:both;
+    margin-left: 700px;
+    background-color: aliceblue;
+    height: 300px;
+    width: 700px;
+    text-align: center;
+    font-size: 25px;
+    padding: 30px;
+    position: center;
+    margin-top: -150px;
+    border-color: steelblue;
+    border-width: 10px;
+    border-style: inset;
+}
+
+a.darkrowA:link{
+    color: aliceblue;
+}
+a.lightrowA:link{
+    color: black;
+}
+a:visited{
+    color:deeppink;
+}
+.data{
+    border-color: blueviolet;
+    border-width: 30px;
+    border-collapse: collapse;
+    padding: 10px;
+    background-color:aliceblue;
+
+}
+.log{
+        height:100%;
+        width:100%;
+        background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(spolMieszk2.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+}
+
+.form-box{
+    color: #0000CD;
+    width: 360px;
+    height: 360px;
+    position: relative;
+    margin: 4% auto;
+    background: #fff;
+    padding: 5px;
+}
+.login{
+    width: 220px;
+    margin: 35px;
+    position: relative;
+    box-shadow: 0 0 20px 9px 	#B0C4DE;
+    border-radius: 30px;
+}
+
+.form-control1{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border:0;
+    outline: none;
+    position: relative;
+}
+
+.password{
+    width: 220px;
+    margin: 35px;
+    position: relative;
+    box-shadow: 0 0 20px 9px 	#B0C4DE;
+    border-radius: 30px;
+}
+
+.form-control2{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border:0;
+    outline: none;
+    position: relative;
+
+}
+

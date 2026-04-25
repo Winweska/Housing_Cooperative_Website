@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:liferay-ui="">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/stylesheet.css">
+  <title>Nowy pracownik</title>
+</head>
+<body>
+<div class="tablesAnew">
+  <div class="halfdiv"></div>
+  <div class="headline">
+  <h1>Nowy pracownik</h1></br>
+  W celu dodania nowego pracownika do bazy danych proszę wprowadzić poprawne dane:
+  <br/>
+  </div>
+    <form action="#" th:action="@{/pracownik/save}" th:object="${newPracownik}"
+          method="post">
+
+    <table class="tablesA" border="0" cellpadding="10"  >
+      <tr>
+        <td>Imię:</td>
+        <td><input type="text" th:field="*{imie}" /></td>
+        <td th:if="${#fields.hasErrors('imie')}" th:errors="*{imie}">Name Error</td>
+      </tr>
+      <tr>
+        <td>Nazwisko:</td>
+        <td><input type="text" th:field="*{nazwisko}" /></td>
+        <td th:if="${#fields.hasErrors('nazwisko')}" th:errors="*{nazwisko}">Name Error</td>
+      </tr>
+      <tr>
+        <td>Numer PESEL::</td>
+        <td><input type="text" th:field="*{pesel}" /></td>
+        <td th:if="${#fields.hasErrors('pesel')}" th:errors="*{pesel}">Name Error</td>
+      </tr>
+      <tr>
+        <td>Numer telefonu:</td>
+        <td><input type="text" th:field="*{nrTelefonu}" /></td>
+        <td th:if="${#fields.hasErrors('nrTelefonu')}" th:errors="*{nrTelefonu}">Name Error</td>
+      </tr>
+      <tr>
+        <td>Adres E-mail:</td>
+        <td><input type="text" th:field="*{email}" /></td>
+        <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Name Error</td>
+      </tr>
+      <tr>
+        <td> Data urodzenia:</td>
+        <td><input type="date" class="form-control" id="dataUrodzenia" name="dataUrodzenia" placeholder="Data urodzenia" /></td>
+        <td th:if="${#fields.hasErrors('dataUrodzenia')}">A więc sugerujesz, że przybywasz z przyszłości?</td>
+      <tr>
+        <td>Numer adresu:</td>
+        <td><input type="text" th:field="*{nrAdresu}" /></td>
+      <td th:if="${#fields.hasErrors('nrAdresu')}" th:errors="*{nrAdresu}">Name Error</td>
+      </tr>
+      <tr>
+        <td>Numer stanowiska:</td>
+        <td><input type="text" th:field="*{nrStanowiska}" /></td>
+        <td th:if="${#fields.hasErrors('nrStanowiska')}" th:errors="*{nrStanowiska}">Name Error</td>
+      </tr>
+      <tr>
+        <td colspan="5"><button class="button" type="submit">Zapisz</button> </td>
+      </tr>
+    </table>
+      <br>
+      W razie wystąpienia jakichkolwiek problemów zadzwoń na infolinię: 666-666-666
+  </form>
+</div>
+</body>

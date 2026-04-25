@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edytuj dane dotyczące pracownika</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+</head>
+<body>
+<div class="tablesAnew">
+    <div class="headline">
+    <h1>Edytuj dane dotyczące pracownika</h1>
+
+    <br/>
+    </div>
+    <form action="#" th:action="@{/update}" th:object="${editPracownik}"
+          method="post">
+
+        <table class="tablesA">
+            <tr>
+                <td>Numer pracownika:</td>
+                <td><input type="text" th:field="*{nrPracownika}" readonly="readonly" /></td>
+            </tr>
+            <td>Imię:</td>
+            <td><input type="text" th:field="*{imie}" /></td>
+            </tr>
+            <tr>
+                <td>Nazwisko:</td>
+                <td><input type="text" th:field="*{nazwisko}" /></td>
+            </tr>
+            <tr>
+                <td>Numer PESEL::</td>
+                <td><input type="text" th:field="*{pesel}" /></td>
+            </tr>
+            <tr>
+                <td>Numer telefonu:</td>
+                <td><input type="text" th:field="*{nrTelefonu}" /></td>
+            </tr>
+            <tr>
+                <td>Adres E-mail:</td>
+                <td><input type="text" th:field="*{email}" /></td>
+            </tr>
+            <tr>
+                <td> Data urodzenia:</td>
+                <td><input type="date" class="form-control" id="dataUrodzenia" name="dataUrodzenia" placeholder="Data urodzenia" /></td>
+            <tr>
+                <td>Numer adresu:</td>
+                <td><input type="text" th:field="*{nrAdresu}" /></td>
+            </tr>
+            <tr>
+                <td>Numer spółdzielni mieszkaniowej:</td>
+                <td><input type="text" th:field="*{nrSpoldzielniMieszkaniowej}" /></td>
+            </tr>
+            <tr>
+                <td>:</td>
+                <td><input type="text" th:field="*{nrStanowiska}" /></td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <td colspan="2"><button class="button" type="submit">Zapisz zmiany</button> </td>
+
+    </form>
+</div>
+</body>>

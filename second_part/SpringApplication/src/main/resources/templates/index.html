@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<style>
+html, body {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.full-height {
+    height: 100%;
+    background: url("/tlo.jpg");
+
+}
+
+</style>
+
+
+
+<!-- <body th:style="'background: url(/assets/img/img.png) no-repeat center center fixed;'"> -->
+
+
+<!--<style th:inline="text">-->
+<!--    body{-->
+<!--        background: url([[@{/assets/img/img.png}]])-->
+<!--        no-repeat center center fixed;-->
+<!--    }-->
+<!--</style>-->
+
+<body>
+<div id="wrapper"></div>
+<div class="full-height">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="logo.png" width="40px" height="40px"/>
+        </a>
+        <a class="navbar-brand" href="/">Spółdzielnia mieszkaniowa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Strona główna
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link right " th:href="@{/main}">Login</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2500">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 h=0" src="spolMieszk3.jpg" alt="First slide" height="350px" width="2000">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 h-0" src="s2.jpg" alt="Second slide" height="350px" width="2000">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 h-0" src="s.jpg" alt="Third slide" height="350px" width="2000">
+        </div>
+    </div>
+</div>
+
+<!--Using images in page    -->
+<!-- <img th:src="@{/assets/img/img.png}" alt="Image" class="img-fluid"> -->
+
+<div class="btn-group-vertical" style="position:relative;top:40px;left:200px;">
+        <button type="button"  class="btn btn-secondary btn-lg">Aktualności</button>
+        <button type="button"   class="btn btn-secondary btn-lg">Ogłoszenia</button>
+        <button type="button"  class="btn btn-secondary btn-lg">Archiwum</button>
+        <button type="button"   class="btn btn-secondary btn-lg">Inwestycje</button>
+        <button type="button"   class="btn btn-secondary btn-lg">Przetargi</button>
+</div>
+
+<div style="position:relative;top:-220px;left:1200px;">
+    <h1 style="font-size:200%; color: olive"><b>Kontakt</b></h1>
+    <h2 style="font-size:120%; color: green">Spółdzielnia Mieszkaniowa Warszawa</h2>
+    <h3 style="font-size:100%; color: black">ul.Krakowska 5</h3>
+    <h4 style="font-size:100%; color: black">02-567 Warszawa</h4><br>
+
+    <h5 style="font-size:100%; color: black">tel.7654321</h5><br>
+
+    <h6 style="font-size:100%; color: black">Godziny pracy biura</h6>
+    <h6 style="font-size:100%; color: black">Pn. 8:00 - 16:00</h6>
+    <h6 style="font-size:100%; color: black">Wt.-Pt. 7:00 - 15:00</h6>
+
+
+
+
+</div>
+
+
+
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+
+
+
+
+
+    <!--<table border="1" cellpadding="10">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="sale : ${listSpoldzielnia}">
+            <td th:text="${sale.id}">ID</td>
+            <td th:text="${sale.item}">Item Name</td>
+            <td th:text="${sale.quantity}">Quantity</td>
+            <td th:text="${sale.amount}">Amount</td>
+        </tr>
+        </tbody>
+
+    </table>-->
+
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</div>
+</body>
+</html>
+

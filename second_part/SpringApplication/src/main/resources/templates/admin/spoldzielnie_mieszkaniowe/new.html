@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:liferay-ui="">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/stylesheet.css">
+  <title>Nowa spółdzielnia mieszkaniowa</title>
+</head>
+<body>
+<div class="tablesAnew">
+  <div class="halfdiv"></div>
+  <div class="headline">
+  <h1>Nowa spółdzielnia mieszkaniowa</h1></br>
+  W celu dodania nowej spółdzielni do bazy danych proszę wprowadzić poprawne dane:
+  <br/>
+  </div>
+  <form action="#" th:action="@{spoldzienie_mieszkaniowe/save}" th:object="${newSpoldzielnieMieszkaniowe}"
+        method="post">
+
+    <table class="tablesA" border="0" cellpadding="10"  >
+      <!--<tr>
+        <td>Numer spółdzielni</td>
+        <td><input type="text" th:field="*{nr_spoldzielni_mieszkaniowej}" /></td>
+      </tr>-->
+      <tr>
+      <tr>
+        <td>Nazwa spółdzielni mieszkaniowej:</td>
+        <td><input type="text" th:field="*{nazwa}" /></td>
+      </tr>
+      <!--<tr>
+        <td>Data założenia: </td>
+        <td><input type="text" th:field="*{data_zalozenia}" /></td>
+      </tr>-->
+      <tr>
+        <td> Data założenia:</td>
+        <td><input type="date" class="form-control" id="data_Zalozenia" name="data_zalozenia" placeholder="Data założenia" /></td>
+      <tr>
+        <td>Numer adresu:</td>
+        <td><input type="text" th:field="*{nr_adresu}" /></td>
+      </tr>
+      <tr>
+        <td colspan="5"><button class="button" type="submit">Zapisz</button> </td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>

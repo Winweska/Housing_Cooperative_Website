@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spoldzielnie Mieszkaniowe</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="/stylesheet.css">
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/static">BDBT Spring Boot Project - Part II</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/main}">Main</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/main}">Login</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="tablesAnew">
+    <div class="headline">
+        <h2>Spółdzielnie mieszkaniowe funkcjonujące w obszarze Mazowsza</h2><br>
+        Potencjalne opcje:<br>
+        <a class="nav-link" th:href="@{/spoldzielnie_mieszkaniowe/new}"><button class="button" type="submit">Dodaj nową spółdzielnię mieszkaniową</button></a>
+        <br>
+        <a class="nav-link" th:href="@{/spoldzielnie_mieszkaniowe/new}"><button class="button" type="submit">Posortuj spółdzielnie mieszkaniowe:</button></a>
+    </div>
+    <div class="tablesA">
+    <!-- Table -->
+    <table class="maintables"  cellpadding = "10" >
+
+        <thead>
+        <tr> <!-- Table row -->
+            <th>NR SPÓŁDZIELNI MIESZKANIOWEJ</th> <!-- Table column -->
+            <th>NAZWA</th>
+            <th>DATA ZAłOŻENIA</th>
+            <th>NR ADRESU</th>
+            <th>EDYTUJ</th>
+            <th>USUŃ</th>
+        </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+        <tr th:each = "spoldzielnieMieszkaniowe: ${listSpoldzielnieMieszkaniowe}">
+            <td th:text = "${spoldzielnieMieszkaniowe.nr_spoldzielni_mieszkaniowej}">NR_SPOLDZIELNI_MIESZKANIOWEJ</td>
+            <td th:text = "${spoldzielnieMieszkaniowe.nazwa}">NAZWA</td>
+            <td th:text = "${spoldzielnieMieszkaniowe.data_zalozenia}">DATA_ZALOZENIA</td>
+            <td th:text = "${spoldzielnieMieszkaniowe.nr_adresu}">NR_ADRESU</td>
+            <td><a th:href="@{'/edit/' +${spoldzielnieMieszkaniowe.nr_spoldzielni_mieszkaniowej}}">Edytuj</a></td>
+            <td><a th:href="@{'/delete/' +${spoldzielnieMieszkaniowe.nr_spoldzielni_mieszkaniowej}}">Usuń</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/script.js}"></script>
+
+</div>
+</body>
+</html>

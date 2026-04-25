@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edytuj dane dotyczące spółdzielni mieszkaniowej</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+</head>
+<body>
+<div class="tablesAnew">
+    <div class="headline">
+    <h1>Edytuj dane dotyczące spółdzielni mieszkaniowej</h1>
+
+    <br/>
+    </div>
+    <form action="#" th:action="@{spoldzielnie_mieszkaniowe/update}" th:object="${editSpoldzielnieMieszkaniowe}"
+          method="post">
+
+        <table class="tablesA">
+            <tr>
+                <td>Numer spółdzielni mieszkaniowej:</td>
+                <td><input type="text" th:field="*{nr_spoldzielni_mieszkaniowej}" readonly="readonly" /></td>
+            </tr>
+            <tr>
+                <td>Nazwa:</td>
+                <td><input type="text" th:field="*{nazwa}" /></td>
+            </tr>
+            <tr>
+                <td>Data założenia:</td>
+                <td><input type="date" class="form-control" th:field="*{data_zalozenia}" id="data_Zalozenia" name="data_zalozenia" placeholder="Data założenia" width="100px"/></td>
+            </tr>
+            <tr>
+                <td>Numer adresu:</td>
+                <td><input type="text" th:field="*{nr_adresu}" /></td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <td colspan="2"><button class="button" type="submit">Zapisz zmiany</button> </td>
+
+    </form>
+</div>
+</body>>

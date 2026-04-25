@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Main Admin Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheet.css">
+</head>
+<body>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">Spółdzielnia mieszkaniowa Mokotów</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/index}">Home</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Main
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:inline="text" style="color:lightskyblue;">You are logged in as <b
+                            style="text-transform:capitalize">[[${#httpServletRequest.remoteUser}]]</b></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="full_heightA">
+    <div class="mainrowA">
+        <div class="clearfix">
+        </div>
+        </div>
+        <div class="smmainrowA"><h2>Witaj na stronie głównej!</h2>
+            Pomyślnie zalogowałeś się jako ADMIN.<br>
+            Aby przejść do danych, zejdź niżej.<br>
+            Aby się wylogować, naciśnij przycisk pod spodem.<br>
+            <button class="btn btn-primary" th:color="black" type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj się</button>
+        </div>
+
+    <div class="darkrowA" style="margin-top: 70px;">
+        <div class="halfdiv"> <img width="200px" src="/after_login/building.png"></div>
+        <div class="halfdiv"><a class="nav-link" th:href="@{/spoldzielnie_mieszkaniowe/main}">Spółdzielnie mieszkaniowe</a></div>
+    </div>
+    <!--nieruchomości-->
+    <div class="lightrowA">
+        <div class="halfdiv">Nieruchomości</div>
+        <div class="halfdiv"><div class="halfdiv"> <img width="200px" src="/after_login/home.png"></div></div>
+    </div>
+    <!--mieszkańcy-->
+    <div class="darkrowA">
+        <div class="halfdiv"><div class="halfdiv"> <img width="200px" src="/after_login/team.png"></div></div>
+        <div class="halfdiv">Mieszkańcy</div>
+    </div>
+    <!--pracownicy-->
+    <div class="lightrowA">
+        <div class="halfdiv"><a class="nav-link" th:href="@{/pracownik/main}">Pracownicy</a></div>
+        <div class="halfdiv"><div class="halfdiv"> <img width="200px" src="/after_login/employee.png"></div></div>
+    </div>
+    <!--wynagrodzenia-->
+    <div class="darkrowA">
+        <div class="halfdiv"> <img width="200px" src="/after_login/money-bag.png"></div>
+        <div class="halfdiv">Wynagrodzenia</div>
+    </div>
+    <!--części wspólne-->
+    <div class="lightrowA">
+        <div class="halfdiv">Części wspólne</div>
+        <div class="halfdiv"><div class="halfdiv"> <img width="200px" src="/after_login/slider.png"></div></div>
+    </div>
+    <!--endspace -->
+    <div class="lightrowA"></div>
+</div>
+
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>
